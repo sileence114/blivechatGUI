@@ -2,9 +2,10 @@
 
 用于 [blivechat]( https://github.com/xfgryujk/blivechat ) 的图形界面。
 
-有朋友在搞 Vtuber， blivechat 类似的项目能通过自定义 CSS 的方式在 OBS 上添加一个非常好看的聊天栏。但是想要在桌面端看到弹幕的话得要再开一个浏览器页面，十分不方便。于是就想写一个背景透明的浮窗浏览器。  
+有朋友在搞 Vtuber，像 blivechat 类似的项目能通过自定义 CSS 的方式在 OBS 上添加一个非常好看的聊天栏。但是想要在桌面端看到弹幕的话得要再开一个浏览器页面，十分不方便。就想写一个背景透明的浮窗浏览器。  
 挺喜欢自带服务端的 blibechat， 但是启动后的 Console 窗口不仅丑，还容易误操作，所以就花了点时间写了个UI。 
-但是写完了 [xfgryujk]( https://github.com/xfgryujk ) 觉得这个 [PR]( https://github.com/xfgryujk/blivechat/pull/50 ) 太大，只能独立出来，于是就有了这个项目。
+
+写完了之后 [xfgryujk]( https://github.com/xfgryujk ) 觉得这个 [PR]( https://github.com/xfgryujk/blivechat/pull/50 ) 太大，就只好独立出来，于是就有了这个项目。
 
 ## 特性
 
@@ -114,3 +115,4 @@ blivechatGUI 支持 blivechat 的所有命令行参数：
  pyinstaller -D -w -i frontend\dist\favicon.ico -n blivechatGUI --add-data=".\data\*;.\data" --add-data=".\frontend\dist;.\frontend\dist" --add-data=".\log;.\log" gui.py
  ```
 3. 项目中出现了 `dist` 文件夹，将文件夹 `dist\blivechatGUI\PyQt5\Qt` 与 `dist\blivechatGUI\PyQt5\Qt5` 合并（合并后文件夹为 `Qt5`）。 
+4. `dist\blivechatGUI` 就是打包输出，可以压缩成 zip 分享出去。
