@@ -104,4 +104,13 @@ venv.bak/
 .mypy_cache/
 
 
-.idea/
+/.idea
+/data
+/frontend
+/log
+/api
+/blivedm
+/models
+/config.py
+/main.py
+/update.py
