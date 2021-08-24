@@ -7,6 +7,12 @@
 
 写完了之后 [xfgryujk]( https://github.com/xfgryujk ) 觉得这个 [PR]( https://github.com/xfgryujk/blivechat/pull/50 ) 太大，就只好独立出来，于是就有了这个项目。
 
+
+| ![桌面截图]( https://github.com/sileence114/blivechatGUI/blob/master/document/screenshot-desktop.png ) | ![游戏截图]( https://github.com/sileence114/blivechatGUI/blob/master/document/screenshot-game.png ) |
+| :----: | :----: |
+| 桌面截图 | 游戏截图 |
+
+
 ## 特性
 
 * 添加了控制台图形窗口；
@@ -87,9 +93,11 @@ blivechatGUI 支持 blivechat 的所有命令行参数：
 
 ## CSS 代码段
 
-若有需要，可以将下面的 CSS 复制下来，记事本中粘贴，保存为后缀名为 `.css` 的文件，在“悬浮窗设置”-“额外的CSS”中添加。
+若有需要，可以将 CSS 保存，在悬【浮窗设置】-【额外的CSS】中添加。  
+若 Github 访问稳定，可复制 CSS 链接，通过【添加路径】按钮添加网络上的 CSS。
+> 上文的[桌面截图]( https://github.com/sileence114/blivechatGUI#blivechat-gui )用了**背景透明**、**隐藏滚动条**和**显示虚线边框**。
 
-* 背景透明
+* 背景透明 [transparent.css]( https://github.com/sileence114/blivechatGUI/raw/master/document/transparent.css )
 若没有自定义 CSS，悬浮窗的背景为白色属于正常现象，添加这段 CSS 可变透明。这段代码会覆盖其他 CSS 的背景色设置，添加了其他 CSS 时慎用。
   ```css
   body{
@@ -99,12 +107,24 @@ blivechatGUI 支持 blivechat 的所有命令行参数：
     background-color: transparent !important;
   }
   ```
-* 显示虚线边框
+* 隐藏滚动条 [hide-scrollbar.css]( https://github.com/sileence114/blivechatGUI/raw/master/document/hide-scrollbar.css )
+这个仅适用于 Chromium 和 Safari。
+  ```css
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  ```
+
+* 显示**虚线边框** [border.css]( https://github.com/sileence114/blivechatGUI/raw/master/document/border.css )
   ```css
   body{
     border: dotted;
   }
   ```
+
+* 渐变配色 [gradient-back-ground.css]( https://github.com/sileence114/blivechatGUI/blob/master/document/gradient-back-ground.css )
+
+  > 上文的[游戏截图]( https://github.com/sileence114/blivechatGUI#blivechat-gui )就是这个 CSS，太长，就不贴了。
 
 ## PyInstaller 打包
 
