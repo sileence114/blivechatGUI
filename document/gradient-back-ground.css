@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css?family=Changa%20One");
+@import url("https://fonts.googleapis.com/css?family=Imprima");
+
+/* 总背景色*/
+body {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* 消息列表容器 */
+yt-live-chat-item-list-renderer {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* 透明背景 */
+yt-live-chat-renderer {
+  background-color: transparent !important;
+}
+
+/* 一般观众 */
+yt-live-chat-text-message-renderer,
+yt-live-chat-text-message-renderer[is-highlighted] {
+  background: linear-gradient(
+    90deg,
+    rgba(173, 169, 150, 0.2),
+    rgba(242, 242, 242, 0.2),
+    rgba(219, 219, 219, 0.2),
+    rgba(234, 234, 234, 0.2)
+  );
+  border-radius: 5px;
+  margin: 5px 0 5px 0;
+}
+/* UP主消息 */
+yt-live-chat-text-message-renderer[author-type="owner"],
+yt-live-chat-text-message-renderer[author-type="owner"][is-highlighted] {
+  background: linear-gradient(
+    45deg,
+    rgba(248, 54, 0, 0.4),
+    rgb(249, 212, 35, 0.6)
+  );
+}
+
+/* 管理员消息 */
+yt-live-chat-text-message-renderer[author-type="moderator"],
+yt-live-chat-text-message-renderer[author-type="moderator"][is-highlighted] {
+  background: linear-gradient(
+    45deg,
+    rgba(67, 233, 123, 0.4),
+    rgba(56, 249, 215, 0.6)
+  );
+}
+
+/* 舰长 */
+yt-live-chat-text-message-renderer[author-type="member"],
+yt-live-chat-text-message-renderer[author-type="member"][is-highlighted] {
+  background: linear-gradient(
+    60deg,
+    rgba(196, 113, 237, 0.6),
+    rgba(205, 107, 210, 0.9),
+    rgba(246, 79, 89, 1)
+  );
+}
+
+yt-live-chat-author-chip #author-name {
+  background-color: transparent !important;
+}
+
+/* Outlines */
+yt-live-chat-renderer * {
+  text-shadow: -2px -2px #000000, -2px -1px #000000, -2px 0px #000000,
+    -2px 1px #000000, -2px 2px #000000, -1px -2px #000000, -1px -1px #000000,
+    -1px 0px #000000, -1px 1px #000000, -1px 2px #000000, 0px -2px #000000,
+    0px -1px #000000, 0px 0px #000000, 0px 1px #000000, 0px 2px #000000,
+    1px -2px #000000, 1px -1px #000000, 1px 0px #000000, 1px 1px #000000,
+    1px 2px #000000, 2px -2px #000000, 2px -1px #000000, 2px 0px #000000,
+    2px 1px #000000, 2px 2px #000000;
+  font-family: "Imprima", "Helvetica Neue", Helvetica, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", SimHei, Arial,
+    sans-serif;
+  font-size: 18px !important;
+  line-height: 18px !important;
+}
+
+yt-live-chat-text-message-renderer #content,
+yt-live-chat-membership-item-renderer #content {
+  overflow: initial !important;
+}
+
+/* Hide scrollbar. */
+yt-live-chat-item-list-renderer #items {
+  overflow: hidden !important;
+}
+
+yt-live-chat-item-list-renderer #item-scroller {
+  overflow: hidden !important;
+}
+
+/* Hide header and input. */
+yt-live-chat-header-renderer,
+yt-live-chat-message-input-renderer {
+  display: none !important;
+}
+
+/* Reduce side padding. */
+yt-live-chat-text-message-renderer {
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+}
+
+/* 消息头像设置 */
+yt-live-chat-text-message-renderer #author-photo {
+  margin: 4px 0px 0px 0px !important;
+}
+yt-live-chat-text-message-renderer #author-photo img {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50px !important;
+}
+/* 打赏头像设置 */
+yt-live-chat-paid-message-renderer #author-photo {
+  width: 55px !important;
+  height: 55px !important;
+  margin: 0px 5px 0px 0px !important;
+}
+yt-live-chat-paid-message-renderer #author-photo img {
+  width: 55px !important;
+  height: 55px !important;
+  border-radius: 55px !important;
+}
+/* 上舰头像设置 */
+yt-live-chat-membership-item-renderer #author-photo {
+  width: 55px !important;
+  height: 55px !important;
+  margin: 0px 5px 0px 0px !important;
+}
+yt-live-chat-membership-item-renderer #author-photo img {
+  width: 55px !important;
+  height: 55px !important;
+  border-radius: 55px !important;
+}
+/* 勋章 */
+yt-live-chat-text-message-renderer #chat-badges {
+  vertical-align: text-top !important;
+}
+
+/* 时间戳 */
+yt-live-chat-text-message-renderer #timestamp {
+  display: none !important;
+  color: #999999 !important;
+  font-family: "Imprima", "Helvetica Neue", Helvetica, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", SimHei, Arial,
+    sans-serif;
+  font-size: 16px !important;
+  line-height: 16px !important;
+}
+
+/* UP主名 */
+yt-live-chat-text-message-renderer #author-name[type="owner"],
+yt-live-chat-text-message-renderer
+  yt-live-chat-author-badge-renderer[type="owner"] {
+  color: #ffd600 !important;
+}
+
+/* 管理员名 */
+yt-live-chat-text-message-renderer #author-name[type="moderator"],
+yt-live-chat-text-message-renderer
+  yt-live-chat-author-badge-renderer[type="moderator"] {
+  color: #0f9d58 !important;
+}
+
+/* 舰长名 */
+yt-live-chat-text-message-renderer #author-name[type="member"],
+yt-live-chat-text-message-renderer
+  yt-live-chat-author-badge-renderer[type="member"] {
+  color: rgb(231, 157, 255) !important;
+}
+
+/* 一般观众名 */
+yt-live-chat-text-message-renderer #author-name {
+  color: #cccccc !important;
+  font-family: "Changa One", "Helvetica Neue", Helvetica, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", SimHei, Arial,
+    sans-serif;
+  font-size: 20px !important;
+  line-height: 20px !important;
+  padding: 5px 5px 5px 5px !important;
+}
+
+yt-live-chat-text-message-renderer #author-name::after {
+  content: ":";
+  margin-left: 2px;
+}
+
+/* 消息文字 */
+yt-live-chat-text-message-renderer #message,
+yt-live-chat-text-message-renderer #message * {
+  color: #ffffff !important;
+  font-family: "Imprima", "Helvetica Neue", Helvetica, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", SimHei, Arial,
+    sans-serif;
+  font-size: 18px !important;
+  line-height: 18px !important;
+}
+
+yt-live-chat-text-message-renderer #message {
+  display: block !important;
+  padding: 5px 5px 5px 5px !important;
+}
+
+/* SuperChat/Fan Funding Messages. */
+
+yt-live-chat-paid-message-renderer #author-name {
+  padding: 5px 5px 5px 5px !important;
+}
+yt-live-chat-paid-message-renderer #author-name,
+yt-live-chat-paid-message-renderer #author-name *,
+yt-live-chat-membership-item-renderer #header-content-inner-column,
+yt-live-chat-membership-item-renderer #header-content-inner-column * {
+  color: #ffffff !important;
+  font-family: "Changa One", "Helvetica Neue", Helvetica, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", SimHei, Arial,
+    sans-serif;
+  font-size: 20px !important;
+  line-height: 20px !important;
+}
+yt-live-chat-membership-item-renderer #author-name {
+  padding: 5px 5px 5px 5px !important;
+}
+
+yt-live-chat-paid-message-renderer #purchase-amount,
+yt-live-chat-paid-message-renderer #purchase-amount *,
+yt-live-chat-membership-item-renderer #header-subtext,
+yt-live-chat-membership-item-renderer #header-subtext * {
+  color: #ffffff !important;
+  font-family: "Imprima", "Helvetica Neue", Helvetica, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", SimHei, Arial,
+    sans-serif;
+  font-size: 18px !important;
+  line-height: 18px !important;
+  padding: 5px 5px 5px 5px !important;
+}
+
+yt-live-chat-paid-message-renderer #content,
+yt-live-chat-paid-message-renderer #content * {
+  color: #ffffff !important;
+  font-family: "Imprima", "Helvetica Neue", Helvetica, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", SimHei, Arial,
+    sans-serif;
+  font-size: 18px !important;
+  line-height: 18px !important;
+}
+
+yt-live-chat-paid-message-renderer {
+  margin: 4px 0 !important;
+}
+
+yt-live-chat-membership-item-renderer #card,
+yt-live-chat-membership-item-renderer #header {
+  background-color: #0f9d58 !important;
+  margin: 4px 0 !important;
+}
+
+yt-live-chat-text-message-renderer a,
+yt-live-chat-membership-item-renderer a {
+  text-decoration: none !important;
+}
+
+yt-live-chat-text-message-renderer[is-deleted],
+yt-live-chat-membership-item-renderer[is-deleted] {
+  display: none !important;
+}
+
+yt-live-chat-ticker-renderer {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+yt-live-chat-ticker-renderer {
+  display: none !important;
+}
+
+yt-live-chat-ticker-paid-message-item-renderer,
+yt-live-chat-ticker-paid-message-item-renderer *,
+yt-live-chat-ticker-sponsor-item-renderer,
+yt-live-chat-ticker-sponsor-item-renderer * {
+  color: #ffffff !important;
+  font-family: "Imprima", "Helvetica Neue", Helvetica, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", SimHei, Arial,
+    sans-serif;
+}
+
+yt-live-chat-mode-change-message-renderer,
+yt-live-chat-viewer-engagement-message-renderer,
+yt-live-chat-restricted-participation-renderer {
+  display: none !important;
+}
+
+@keyframes inout_ani {
+  0% {
+    opacity: 0;
+    transform: translateX(160px) scale(0.5);
+  }
+  0.16583747927031509% {
+    opacity: 1;
+    transform: none;
+  }
+  99.66832504145937% {
+    opacity: 1;
+    transform: none;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-160px) scale(0.5);
+  }
+}
+
+yt-live-chat-text-message-renderer,
+yt-live-chat-membership-item-renderer,
+yt-live-chat-paid-message-renderer {
+  animation-name: inout_ani;
+  animation-duration: 301500ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+}
