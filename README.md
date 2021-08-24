@@ -24,7 +24,7 @@
 
 ### 一、发布版
 
-1. 下载发布版（仅提供x64 Windows版）
+1. 下载[发布版]( https://github.com/sileence114/blivechatGUI/releases )（仅提供x64 Windows版）
 2. 双击 blivechatGUI.exe 运行，也可以像 blivechat 那样添加命令行参数。
   ```bat
   blivechatGUI.exe --host 127.0.0.1 --port 12450
@@ -104,3 +104,13 @@ blivechatGUI 支持 blivechat 的所有命令行参数：
     border: dotted;
   }
   ```
+
+## PyInstaller 打包
+
+0. 按照[前文所述]( https://github.com/sileence114/blivechatGUI#%E4%BA%8C%E6%BA%90%E4%BB%A3%E7%A0%81%E7%89%88 )，安装源代码版，确保其正常运行
+1. 安装 PyInstaller，过程略
+2. cd 到项目根目录，打包
+ ```bat
+ pyinstaller -D -w -i frontend\dist\favicon.ico -n blivechatGUI --add-data=".\data\*;.\data" --add-data=".\frontend\dist;.\frontend\dist" --add-data=".\log;.\log" gui.py
+ ```
+3. 项目中出现了 `dist` 文件夹，将文件夹 `dist\blivechatGUI\PyQt5\Qt` 与 `dist\blivechatGUI\PyQt5\Qt5` 合并（合并后文件夹为 `Qt5`）。 
