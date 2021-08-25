@@ -95,7 +95,7 @@ blivechatGUI 支持 blivechat 的所有命令行参数：
 
 若有需要，可以将 CSS 保存，在悬【浮窗设置】-【额外的CSS】中添加。  
 若 Github 访问稳定，可复制 CSS 链接，通过【添加路径】按钮添加网络上的 CSS。
-> 上文的[桌面截图]( https://github.com/sileence114/blivechatGUI#blivechat-gui )用了**背景透明**、**隐藏滚动条**和**显示虚线边框**。
+> 上文的[桌面截图]( #blivechat-gui )用了**背景透明**、**隐藏滚动条**和**显示虚线边框**。
 
 * 背景透明 [transparent.css]( https://github.com/sileence114/blivechatGUI/raw/master/document/transparent.css )
 若没有自定义 CSS，悬浮窗的背景为白色属于正常现象，添加这段 CSS 可变透明。这段代码会覆盖其他 CSS 的背景色设置，添加了其他 CSS 时慎用。
@@ -128,7 +128,7 @@ blivechatGUI 支持 blivechat 的所有命令行参数：
 
 ## PyInstaller 打包
 
-0. 按照[前文所述]( https://github.com/sileence114/blivechatGUI#%E4%BA%8C%E6%BA%90%E4%BB%A3%E7%A0%81%E7%89%88 )，安装源代码版，确保其正常运行
+0. 按照[前文所述]( #%E4%BA%8C%E6%BA%90%E4%BB%A3%E7%A0%81%E7%89%88 )，安装源代码版，确保其正常运行
 1. 安装 PyInstaller，过程略
 2. cd 到项目根目录，打包
  ```bat
